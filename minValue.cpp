@@ -18,7 +18,7 @@ int FindMinValue(std::array<int, N> targetList) {
     // Loop through every number in the array
     for (int number : targetList) {
         // Check if the number is smaller than the current smallest value
-        if (number > currentSmallestValue) {
+        if (number < currentSmallestValue) {
             // If so, the number becomes the new current smallest value
             currentSmallestValue = number;
         }
@@ -54,5 +54,5 @@ int main() {
     // Call FindMinValue()
     int smallestValue = FindMinValue(listOfInt);
     // Display the min value
-    printf("\nThe max value is %i\n", smallestValue);
+    printf("\nThe min value is %i\n", smallestValue);
 }
